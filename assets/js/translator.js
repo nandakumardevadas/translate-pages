@@ -1,11 +1,17 @@
 var translator = (function() {
   return {
+    /**
+     *  Config settings for the translate functions
+     */
     config: function(language, translationContent) {
       this.language = language;
       this.translationContent = translationContent;
       return this;
     },
 
+    /**
+     *  To translate the particular key based on the current language
+     */
     translateByKey: function(keyName) {
       let result = keyName;
       try {
@@ -19,7 +25,9 @@ var translator = (function() {
         return keyName;
       }
     },
-
+    /**
+     * Translate function to convert the text into translated content
+     */
     translate: function() {
       let content = $("body");
       let self = this;

@@ -3,8 +3,8 @@ $(document).ready(function() {
   let translationSetup = translator.config("en", translationData);
   translationSetup.translate();
 
-  $(document).on('change', '#language-selection', function() {
-      translationSetup.setLanguage(this.value)
-      translationSetup.translate();
-  })
+  $(document).on("change", "#language-selection", function() {
+    translationSetup.setLanguage(this.value);
+    translationSetup.translate();
+  });
 });
